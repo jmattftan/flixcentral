@@ -1,0 +1,43 @@
+.main-row {
+  margin-top: 5rem;
+}
+
+.nav-color {
+  background-color: #863232;
+}
+
+.card {
+  border: none;
+  border-radius: 0px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  height: 350px;
+  width: 250px;
+}
+
+.card-img-top {
+  border: none;
+  border-radius: 0px;
+  height: 350px;
+  transition: all 1s ease;
+  width: 250px;
+}
+
+.card:hover .card-img-top {
+  filter: blur(5px);
+  transition: all 1s ease;
+}
+
+.f-title {
+  color: white;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease;
+}
+
+.card:hover .f-title {
+  opacity: 1;
+  transition: all 1s ease;
+}
