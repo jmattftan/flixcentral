@@ -5,10 +5,10 @@ import F4 from "./assets/f4.webp";
 import F5 from "./assets/f5.webp";
 import F6 from "./assets/f6.webp";
 
-function NowShowing() {
+function ComingSoon() {
   return (
     <div
-      id="now-showing"
+      id="coming-soon"
       className="row main-row ms-0 me-0 p-1"
       style={{ border: "1px solid blue" }}
     >
@@ -17,7 +17,7 @@ function NowShowing() {
         style={{ border: "1px solid yellow" }}
       >
         <div className="row m-1 p-1" style={{ border: "1px solid blue" }}>
-          <h1 className="text-center">NOW SHOWING</h1>
+          <h1 className="text-center">Coming Soon</h1>
         </div>
         <div className="row m-1 p-1" style={{ border: "1px solid blue" }}>
           <div
@@ -28,82 +28,82 @@ function NowShowing() {
               <div className="row m-0 p-0">
                 <div className="container m-0 p-0">
                   <div className="ns-container">
-                    <img className="ns-image" src={F1} />
+                    <img className="ns-image" src={F4} />
                     <div className="ns-info">
-                      <h5 className="ns-title m-1">Madame Web</h5>
+                      <h5 className="ns-title m-1">The Beekeeper</h5>
+                      <p className="ns-time m-1">
+                        <b className="rated-system-r">R</b> 2hrs and 13mins
+                      </p>
+                      <ul>
+                        <li>Standard - ₱350</li>
+                        <li>Premium - ₱550</li>
+                      </ul>
+                      <a className="ns-more-details m-1 text-light" href="">
+                        More Details
+                      </a>
+                    </div>
+                  </div>
+                  <div className="ns-container-two">
+                    <div className="ns-info-two">
+                      <p className="ns-genre m-1">Action/Fanstasy</p>
+                      <a className="ns-buy-ticket m-1 text-light" href="">
+                        Buy Ticket
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-sm-12 col-md-12 col-lg-4 col-xl-4 p-1"
+            style={{ border: "1px solid yellow" }}
+          >
+            <div className="glass p-0">
+              <div className="row m-0 p-0">
+                <div className="container m-0 p-0">
+                  <div className="ns-container">
+                    <img className="ns-image" src={F5} />
+                    <div className="ns-info">
+                      <h5 className="ns-title m-1">Dune: Part Two</h5>
+                      <p className="ns-time m-1">
+                        <b className="rated-system-nc-17">NC-17</b> 2hrs and
+                        13mins
+                      </p>
+                      <ul>
+                        <li>Standard - ₱350</li>
+                        <li>Premium - ₱550</li>
+                      </ul>
+                      <a className="ns-more-details m-1 text-light" href="">
+                        More Details
+                      </a>
+                    </div>
+                  </div>
+                  <div className="ns-container-two">
+                    <div className="ns-info-two">
+                      <p className="ns-genre m-1">Action/Fanstasy</p>
+                      <a className="ns-buy-ticket m-1 text-light" href="">
+                        Buy Ticket
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-sm-12 col-md-12 col-lg-4 col-xl-4 p-1"
+            style={{ border: "1px solid yellow" }}
+          >
+            <div className="glass p-0">
+              <div className="row m-0 p-0">
+                <div className="container m-0 p-0">
+                  <div className="ns-container">
+                    <img className="ns-image" src={F6} />
+                    <div className="ns-info">
+                      <h5 className="ns-title m-1">Kung Fu Panda 4</h5>
                       <p className="ns-time m-1">
                         <b className="rated-system-g">G</b> 2hrs and 13mins
-                      </p>
-                      <ul>
-                        <li>Standard - ₱350</li>
-                        <li>Premium - ₱550</li>
-                      </ul>
-                      <a className="ns-more-details m-1 text-light" href="">
-                        More Details
-                      </a>
-                    </div>
-                  </div>
-                  <div className="ns-container-two">
-                    <div className="ns-info-two">
-                      <p className="ns-genre m-1">Action/Fanstasy</p>
-                      <a className="ns-buy-ticket m-1 text-light" href="">
-                        Buy Ticket
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-sm-12 col-md-12 col-lg-4 col-xl-4 p-1"
-            style={{ border: "1px solid yellow" }}
-          >
-            <div className="glass p-0">
-              <div className="row m-0 p-0">
-                <div className="container m-0 p-0">
-                  <div className="ns-container">
-                    <img className="ns-image" src={F2} />
-                    <div className="ns-info">
-                      <h5 className="ns-title m-1">Lisa Frankenstein</h5>
-                      <p className="ns-time m-1">
-                        <b className="rated-system-pg">PG</b> 2hrs and 13mins
-                      </p>
-                      <ul>
-                        <li>Standard - ₱350</li>
-                        <li>Premium - ₱550</li>
-                      </ul>
-                      <a className="ns-more-details m-1 text-light" href="">
-                        More Details
-                      </a>
-                    </div>
-                  </div>
-                  <div className="ns-container-two">
-                    <div className="ns-info-two">
-                      <p className="ns-genre m-1">Action/Fanstasy</p>
-                      <a className="ns-buy-ticket m-1 text-light" href="">
-                        Buy Ticket
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-sm-12 col-md-12 col-lg-4 col-xl-4 p-1"
-            style={{ border: "1px solid yellow" }}
-          >
-            <div className="glass p-0">
-              <div className="row m-0 p-0">
-                <div className="container m-0 p-0">
-                  <div className="ns-container">
-                    <img className="ns-image" src={F3} />
-                    <div className="ns-info">
-                      <h5 className="ns-title m-1">The Fall Guy</h5>
-                      <p className="ns-time m-1">
-                        <b className="rated-system-pg-13">PG-13</b> 2hrs and
-                        13mins
                       </p>
                       <ul>
                         <li>Standard - ₱350</li>
@@ -132,4 +132,4 @@ function NowShowing() {
   );
 }
 
-export default NowShowing;
+export default ComingSoon;

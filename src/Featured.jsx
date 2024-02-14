@@ -19,12 +19,19 @@ function Featured() {
       autoplay: true,
       autoplayTimeout: 3000,
       autoplayHoverPause: true,
+      center: true,
+      //slideTransition: "linear",
+      //autoplaySpeed: 6000,
+      //smartSpeed: 6000,
+      responsiveClass: true,
       responsive: {
         0: {
           items: 1,
+          nav: true,
         },
         600: {
-          items: 4,
+          items: 3,
+          nav: true,
         },
         1000: {
           items: 6,
@@ -43,6 +50,7 @@ function Featured() {
 
   return (
     <div
+      id="featured"
       className="row main-row  ms-0 me-0 p-1"
       style={{ border: "1px solid blue" }}
     >
@@ -58,7 +66,7 @@ function Featured() {
           style={{ border: "1px solid blue" }}
         >
           <div
-            className="owl-carousel me-5 p-1"
+            className="owl-carousel owl-theme me-5 p-1"
             style={{ border: "1px solid green" }}
           >
             <div
