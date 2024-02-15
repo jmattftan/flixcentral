@@ -8,7 +8,7 @@ import F6 from "./assets/f6.webp";
 function NowShowing() {
   return (
     <div
-      id="now-showing"
+      id="now_showing"
       className="row main-row ms-0 me-0 p-1"
       style={{ border: "1px solid blue" }}
     >
@@ -38,7 +38,12 @@ function NowShowing() {
                         <li>Standard - ₱350</li>
                         <li>Premium - ₱550</li>
                       </ul>
-                      <a className="ns-more-details m-1 text-light" href="">
+                      <a
+                        type="button"
+                        className="ns-more-details m-1 text-light"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Modal"
+                      >
                         More Details
                       </a>
                     </div>

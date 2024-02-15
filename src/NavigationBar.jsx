@@ -37,7 +37,7 @@ function NavigationBar() {
               <a
                 className="nav-link active text-light"
                 aria-current="page"
-                href="#now-showing"
+                href="#now_showing"
               >
                 Now Showing
               </a>
@@ -46,7 +46,7 @@ function NavigationBar() {
               <a
                 className="nav-link active text-light"
                 aria-current="page"
-                href="#coming-soon"
+                href="#coming_soon"
               >
                 Coming Soon
               </a>
@@ -55,7 +55,7 @@ function NavigationBar() {
               <a
                 className="nav-link active text-light"
                 aria-current="page"
-                href="#contact-us"
+                href="#contact_us"
               >
                 Contact Us
               </a>

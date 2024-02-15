@@ -2,6 +2,7 @@ import NavigationBar from "./NavigationBar.jsx";
 import Featured from "./Featured.jsx";
 import NowShowing from "./NowShowing.jsx";
 import ComingSoon from "./ComingSoon.jsx";
+import MoreDetailsModal from "./MoreDetailsModal.jsx";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Featured></Featured>
       <NowShowing></NowShowing>
       <ComingSoon></ComingSoon>
+      <MoreDetailsModal></MoreDetailsModal>
     </>
   );
 }

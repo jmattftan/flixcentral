@@ -8,7 +8,7 @@ import F6 from "./assets/f6.webp";
 function ComingSoon() {
   return (
     <div
-      id="coming-soon"
+      id="coming_soon"
       className="row main-row ms-0 me-0 p-1"
       style={{ border: "1px solid blue" }}
     >
