@@ -27,11 +27,11 @@ function NowShowing() {
             <div className="glass p-0">
               <div className="row m-0 p-0">
                 <div className="container m-0 p-0">
-                  <div className="ns-container">
-                    <img className="ns-image" src={F1} />
-                    <div className="ns-info">
-                      <h5 className="ns-title m-1">Madame Web</h5>
-                      <p className="ns-time m-1">
+                  <div className="container-one">
+                    <img className="image" src={F1} />
+                    <div className="info">
+                      <h5 className="title m-1">Madame Web</h5>
+                      <p className="time m-1">
                         <b className="rated-system-g">G</b> 2hrs and 13mins
                       </p>
                       <ul>
@@ -40,18 +40,18 @@ function NowShowing() {
                       </ul>
                       <a
                         type="button"
-                        className="ns-more-details m-1 text-light"
+                        className="more-details m-1 text-light"
                         data-bs-toggle="modal"
-                        data-bs-target="#Modal"
+                        data-bs-target="#modal"
                       >
                         More Details
                       </a>
                     </div>
                   </div>
-                  <div className="ns-container-two">
-                    <div className="ns-info-two">
-                      <p className="ns-genre m-1">Action/Fanstasy</p>
-                      <a className="ns-buy-ticket m-1 text-light" href="">
+                  <div className="container-two">
+                    <div className="info-two">
+                      <p className="genre m-1">Action/Fanstasy</p>
+                      <a className="buy-ticket m-1 text-light" href="">
                         Buy Ticket
                       </a>
                     </div>
@@ -67,26 +67,26 @@ function NowShowing() {
             <div className="glass p-0">
               <div className="row m-0 p-0">
                 <div className="container m-0 p-0">
-                  <div className="ns-container">
-                    <img className="ns-image" src={F2} />
-                    <div className="ns-info">
-                      <h5 className="ns-title m-1">Lisa Frankenstein</h5>
-                      <p className="ns-time m-1">
+                  <div className="container-one">
+                    <img className="image" src={F2} />
+                    <div className="info">
+                      <h5 className="title m-1">Lisa Frankenstein</h5>
+                      <p className="time m-1">
                         <b className="rated-system-pg">PG</b> 2hrs and 13mins
                       </p>
                       <ul>
                         <li>Standard - ₱350</li>
                         <li>Premium - ₱550</li>
                       </ul>
-                      <a className="ns-more-details m-1 text-light" href="">
+                      <a className="more-details m-1 text-light" href="">
                         More Details
                       </a>
                     </div>
                   </div>
-                  <div className="ns-container-two">
-                    <div className="ns-info-two">
-                      <p className="ns-genre m-1">Action/Fanstasy</p>
-                      <a className="ns-buy-ticket m-1 text-light" href="">
+                  <div className="container-two">
+                    <div className="info-two">
+                      <p className="genre m-1">Action/Fanstasy</p>
+                      <a className="buy-ticket m-1 text-light" href="">
                         Buy Ticket
                       </a>
                     </div>
@@ -102,11 +102,11 @@ function NowShowing() {
             <div className="glass p-0">
               <div className="row m-0 p-0">
                 <div className="container m-0 p-0">
-                  <div className="ns-container">
-                    <img className="ns-image" src={F3} />
-                    <div className="ns-info">
-                      <h5 className="ns-title m-1">The Fall Guy</h5>
-                      <p className="ns-time m-1">
+                  <div className="container-one">
+                    <img className="image" src={F3} />
+                    <div className="info">
+                      <h5 className="title m-1">The Fall Guy</h5>
+                      <p className="time m-1">
                         <b className="rated-system-pg-13">PG-13</b> 2hrs and
                         13mins
                       </p>
@@ -114,15 +114,15 @@ function NowShowing() {
                         <li>Standard - ₱350</li>
                         <li>Premium - ₱550</li>
                       </ul>
-                      <a className="ns-more-details m-1 text-light" href="">
+                      <a className="more-details m-1 text-light" href="">
                         More Details
                       </a>
                     </div>
                   </div>
-                  <div className="ns-container-two">
-                    <div className="ns-info-two">
-                      <p className="ns-genre m-1">Action/Fanstasy</p>
-                      <a className="ns-buy-ticket m-1 text-light" href="">
+                  <div className="container-two">
+                    <div className="info-two">
+                      <p className="genre m-1">Action/Fanstasy</p>
+                      <a className="buy-ticket m-1 text-light" href="">
                         Buy Ticket
                       </a>
                     </div>

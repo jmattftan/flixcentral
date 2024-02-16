@@ -60,16 +60,16 @@
   backdrop-filter: blur(10px);
 }
 
-.ns-container {
+.container-one {
   display: flex;
   float: left;
 }
 
-.ns-info {
+.info {
   margin-left: 10px;
 }
 
-.ns-image {
+.image {
   border-radius: 3px;
   width: 100px;
   height: 150px;
@@ -110,39 +110,39 @@
   border-radius: 3px;
 }
 
-.ns-container-two {
+.container-two {
   display: flex;
   float: right;
 }
 
-.ns-info-two {
+.info-two {
   margin-right: 5px;
 }
 
-.ns-buy-ticket {
+.buy-ticket {
   bottom: 0;
   margin-right: 10px !important;
   position: absolute;
   right: 0;
 }
 
-.ns-more-details {
+.more-details {
   bottom: 0;
+  left: 1;
   margin-right: 10px !important;
   position: absolute;
-  left: 1;
 }
 
 .modal-body {
+  background-color: #262626;
   border: none;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  background-color: #262626;
 }
 
 .modal-footer {
+  background-color: #863232;
   border: none;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #863232;
 }

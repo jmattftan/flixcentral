@@ -6,37 +6,68 @@ function MoreDetailsModal() {
   return (
     <div
       className="modal fade"
-      id="Modal"
-      tabIndex="-1"
-      aria-labelledby="ModalLabel"
+      id="modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
     >
       <div className="modal-dialog modal-xl modal-dialog-centered">
         <div className="modal-content">
-          <div className="modal-body ">
-            <div className="row m-1 justify-content-center d-flex">
-              <iframe
-                id="movie-trailer"
-                className="p-0"
-                width="1110"
-                height="350"
-                src={iframe_src}
-                allow="fullscreen"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="row m-1 mt-3">
-              <p
-                className="p-1"
-                style={{
-                  borderBottom: "1px solid white",
-                }}
+          <div className="modal-body">
+            <div className="row m-1 p-1" style={{ border: "1px solid red" }}>
+              <div
+                className="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-1 justify-content-center d-flex"
+                style={{ border: "1px solid yellow" }}
               >
-                Cassandra Webb is a New York City paramedic who starts to show
-                signs of clairvoyance. Forced to confront revelations about her
-                past, she must protect three young women from a mysterious
-                adversary who wants them dead.
-              </p>
+                <iframe
+                  id="movie-trailer"
+                  className="p-0"
+                  width="1110"
+                  height="350"
+                  src={iframe_src}
+                  allow="fullscreen"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+            <div
+              className="row m-1 p-1 mt-3"
+              style={{ border: "1px solid red" }}
+            >
+              <div
+                className="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-1"
+                style={{ border: "1px solid yellow" }}
+              >
+                <p>
+                  Cassandra Webb is a New York City paramedic who starts to show
+                  signs of clairvoyance. Forced to confront revelations about
+                  her past, she must protect three young women from a mysterious
+                  adversary who wants them dead.
+                </p>
+              </div>
+            </div>
+            <div className="row m-1 p-1" style={{ border: "1px solid red" }}>
+              <div
+                className="col-sm-12 col-md-12 col-lg-6 col-xl-6 text-start p-1"
+                style={{ border: "1px solid yellow" }}
+              >
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  <li>Released Date: February 14, 2024</li>
+                  <li>Director: S.J. Clarkson</li>
+                  <li>Budget: $40 Million</li>
+                </ul>
+              </div>
+              <div
+                className="col-sm-12 col-md-12 col-lg-6 col-xl-6 text-start p-1"
+                style={{ border: "1px solid yellow" }}
+              >
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  <li>Distributed by: Sony Pictures Releasing </li>
+                  <li>Main Cast: Dakota Johnson</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div className="modal-footer">

@@ -27,26 +27,26 @@ function ComingSoon() {
             <div className="glass p-0">
               <div className="row m-0 p-0">
                 <div className="container m-0 p-0">
-                  <div className="ns-container">
-                    <img className="ns-image" src={F4} />
-                    <div className="ns-info">
-                      <h5 className="ns-title m-1">The Beekeeper</h5>
-                      <p className="ns-time m-1">
+                  <div className="container-one">
+                    <img className="image" src={F4} />
+                    <div className="info">
+                      <h5 className="title m-1">The Beekeeper</h5>
+                      <p className="time m-1">
                         <b className="rated-system-r">R</b> 2hrs and 13mins
                       </p>
                       <ul>
                         <li>Standard - ₱350</li>
                         <li>Premium - ₱550</li>
                       </ul>
-                      <a className="ns-more-details m-1 text-light" href="">
+                      <a className="more-details m-1 text-light" href="">
                         More Details
                       </a>
                     </div>
                   </div>
-                  <div className="ns-container-two">
-                    <div className="ns-info-two">
-                      <p className="ns-genre m-1">Action/Fanstasy</p>
-                      <a className="ns-buy-ticket m-1 text-light" href="">
+                  <div className="container-two">
+                    <div className="info-two">
+                      <p className="genre m-1">Action/Fanstasy</p>
+                      <a className="buy-ticket m-1 text-light" href="">
                         Buy Ticket
                       </a>
                     </div>
@@ -62,11 +62,11 @@ function ComingSoon() {
             <div className="glass p-0">
               <div className="row m-0 p-0">
                 <div className="container m-0 p-0">
-                  <div className="ns-container">
-                    <img className="ns-image" src={F5} />
-                    <div className="ns-info">
-                      <h5 className="ns-title m-1">Dune: Part Two</h5>
-                      <p className="ns-time m-1">
+                  <div className="container-one">
+                    <img className="image" src={F5} />
+                    <div className="info">
+                      <h5 className="title m-1">Dune: Part Two</h5>
+                      <p className="time m-1">
                         <b className="rated-system-nc-17">NC-17</b> 2hrs and
                         13mins
                       </p>
@@ -74,15 +74,15 @@ function ComingSoon() {
                         <li>Standard - ₱350</li>
                         <li>Premium - ₱550</li>
                       </ul>
-                      <a className="ns-more-details m-1 text-light" href="">
+                      <a className="more-details m-1 text-light" href="">
                         More Details
                       </a>
                     </div>
                   </div>
-                  <div className="ns-container-two">
-                    <div className="ns-info-two">
-                      <p className="ns-genre m-1">Action/Fanstasy</p>
-                      <a className="ns-buy-ticket m-1 text-light" href="">
+                  <div className="container-two">
+                    <div className="info-two">
+                      <p className="genre m-1">Action/Fanstasy</p>
+                      <a className="buy-ticket m-1 text-light" href="">
                         Buy Ticket
                       </a>
                     </div>
@@ -98,26 +98,26 @@ function ComingSoon() {
             <div className="glass p-0">
               <div className="row m-0 p-0">
                 <div className="container m-0 p-0">
-                  <div className="ns-container">
-                    <img className="ns-image" src={F6} />
-                    <div className="ns-info">
-                      <h5 className="ns-title m-1">Kung Fu Panda 4</h5>
-                      <p className="ns-time m-1">
+                  <div className="container-one">
+                    <img className="image" src={F6} />
+                    <div className="info">
+                      <h5 className="title m-1">Kung Fu Panda 4</h5>
+                      <p className="time m-1">
                         <b className="rated-system-g">G</b> 2hrs and 13mins
                       </p>
                       <ul>
                         <li>Standard - ₱350</li>
                         <li>Premium - ₱550</li>
                       </ul>
-                      <a className="ns-more-details m-1 text-light" href="">
+                      <a className="more-details m-1 text-light" href="">
                         More Details
                       </a>
                     </div>
                   </div>
-                  <div className="ns-container-two">
-                    <div className="ns-info-two">
-                      <p className="ns-genre m-1">Action/Fanstasy</p>
-                      <a className="ns-buy-ticket m-1 text-light" href="">
+                  <div className="container-two">
+                    <div className="info-two">
+                      <p className="genre m-1">Action/Fanstasy</p>
+                      <a className="buy-ticket m-1 text-light" href="">
                         Buy Ticket
                       </a>
                     </div>
