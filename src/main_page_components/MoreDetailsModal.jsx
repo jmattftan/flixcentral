@@ -1,4 +1,5 @@
-import { MovieTrailerControls } from "./MovieTrailerControls.js";
+import React from "react";
+import { MovieTrailerControls } from "../javascript/MovieTrailerControls.js";
 
 function MoreDetailsModal() {
   const { iframe_src, stop_movie_trailer } = MovieTrailerControls();
@@ -9,7 +10,7 @@ function MoreDetailsModal() {
       id="modal"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
-      tabindex="-1"
+      tabIndex="-1"
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
     >

@@ -1,19 +1,19 @@
-import NavigationBar from "./NavigationBar.jsx";
-import Featured from "./Featured.jsx";
-import NowShowing from "./NowShowing.jsx";
-import ComingSoon from "./ComingSoon.jsx";
-import MoreDetailsModal from "./MoreDetailsModal.jsx";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainPage from "./pages/MainPage.jsx";
+import BuyTicketPage from "./pages/BuyTicketPage.jsx";
 import "./App.css";
+//import "../src/assets/bootstrap/bootstrap.min.css";
+//import "../src/assets/bootstrap/bootstrap.bundle.min.js";
 
 function App() {
   return (
-    <>
-      <NavigationBar></NavigationBar>
-      <Featured></Featured>
-      <NowShowing></NowShowing>
-      <ComingSoon></ComingSoon>
-      <MoreDetailsModal></MoreDetailsModal>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/BuyTicketPage" element={<BuyTicketPage />} />
+      </Routes>
+    </Router>
   );
 }
 

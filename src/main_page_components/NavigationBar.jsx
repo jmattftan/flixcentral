@@ -1,4 +1,5 @@
-import Icons from "./assets/icon.png";
+import React from "react";
+import Icons from "../assets/images/icons/icon.png";
 
 function NavigationBar() {
   return (

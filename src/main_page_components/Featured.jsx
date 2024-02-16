@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import "./owl_carousel/owl.carousel.min.css";
-import "./owl_carousel/owl.theme.default.min.css";
-import "./owl_carousel/jquery.min.js";
-import "./owl_carousel/owl.carousel.min.js";
-import F1 from "./assets/f1.webp";
-import F2 from "./assets/f2.webp";
-import F3 from "./assets/f3.webp";
-import F4 from "./assets/f4.webp";
-import F5 from "./assets/f5.webp";
-import F6 from "./assets/f6.webp";
+import "../assets/owl_carousel/owl.carousel.min.css";
+import "../assets/owl_carousel/owl.theme.default.min.css";
+import "../assets/owl_carousel/jquery.min.js";
+import "../assets/owl_carousel/owl.carousel.min.js";
+import F1 from "../assets/images/movie_logos/f1.webp";
+import F2 from "../assets/images/movie_logos/f2.webp";
+import F3 from "../assets/images/movie_logos/f3.webp";
+import F4 from "../assets/images/movie_logos/f4.webp";
+import F5 from "../assets/images/movie_logos/f5.webp";
+import F6 from "../assets/images/movie_logos/f6.webp";
 
 function Featured() {
   useEffect(() => {
