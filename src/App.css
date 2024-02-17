@@ -34,7 +34,7 @@
 }
 
 .f-title {
-  color: white;
+  color: #ffffff;
   left: 50%;
   opacity: 0;
   position: absolute;
@@ -76,35 +76,35 @@
 }
 
 .rated-system-g {
-  color: white;
+  color: #ffffff;
   background-color: #008000;
   border: 3px solid #008000;
   border-radius: 3px;
 }
 
 .rated-system-pg {
-  color: white;
+  color: #ffffff;
   background-color: #daa520;
   border: 3px solid #daa520;
   border-radius: 3px;
 }
 
 .rated-system-pg-13 {
-  color: white;
+  color: #ffffff;
   background-color: #0000ff;
   border: 3px solid #0000ff;
   border-radius: 3px;
 }
 
 .rated-system-r {
-  color: white;
+  color: #ffffff;
   background-color: #ff0000;
   border: 3px solid #ff0000;
   border-radius: 3px;
 }
 
 .rated-system-nc-17 {
-  color: white;
+  color: #ffffff;
   background-color: #000000;
   border: 3px solid #000000;
   border-radius: 3px;
@@ -146,3 +146,242 @@
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+
+/** Start Movie Seat Picker **/
+
+.box {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.box-two {
+  box-sizing: border-box;
+  height: fit-content;
+  max-height: 96vh;
+  padding: 10px;
+  width: 550px;
+}
+
+.outer-section-one {
+  align-items: center;
+  /**background: rgba(134, 50, 50, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);**/
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.inner-section-one {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+}
+
+.movie-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.inner-section-two {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  min-height: 150px;
+  position: relative;
+  width: 100%;
+}
+
+.inner-section-two::before {
+  background: #f5f5f5;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  bottom: 0;
+  content: "";
+  height: 7px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 460px;
+}
+
+.indicators {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.item {
+  font-size: 16px;
+  position: relative;
+}
+
+.item::before {
+  background: rgb(255, 255, 255);
+  border-radius: 0.3mm;
+  content: "";
+  height: 10px;
+  left: -12px;
+  outline: 0.2mm solid rgb(120, 120, 120);
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 10px;
+}
+
+.item:nth-child(2)::before {
+  background: rgb(180, 180, 180);
+  outline: none;
+}
+
+.item:nth-child(3)::before {
+  background: #863232;
+  border-radius: 0.3mm;
+  outline: none;
+}
+
+.pick-seats {
+  display: grid;
+  grid-gap: 18px;
+  grid-template-columns: repeat(10, 1fr);
+  margin-top: 20px;
+  margin: 60px 0;
+  padding: 1rem;
+  position: relative;
+}
+
+.seat {
+  background: whitesmoke;
+  border-radius: 0.5mm;
+  cursor: pointer;
+  height: 30px;
+  outline: 0.3mm solid rgb(180, 180, 180);
+  width: 30px;
+}
+
+.pick-seats input:checked + label {
+  background: #863232;
+  border-radius: 0.5mm;
+  color: #ffffff;
+  outline: none;
+}
+
+input {
+  display: none;
+}
+
+.seat.booked {
+  background: rgb(180, 180, 180);
+  outline: none;
+}
+
+.outer-section-two {
+  align-items: center;
+  /**background: rgba(134, 50, 50, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);**/
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.inner-section-three {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bolder;
+  justify-content: center;
+}
+
+.inner-section-three span {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.btn-purchase-ticket {
+  background-color: #863232;
+  border: none;
+  color: #ffffff;
+}
+
+.btn-purchase-ticket:hover {
+  background-color: white;
+  color: black;
+}
+
+/*
+.timings {
+  align-items: center;
+  align-items: center;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-top: 30px;
+  width: 100%;
+  width: 100%;
+}
+
+.dates {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.dates-item {
+  align-items: center;
+  background: rgb(233, 233, 233);
+  border-radius: 2mm;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: center;
+  padding: 10px 0;
+  text-align: center;
+  width: 50px;
+}
+.day {
+  font-size: 12px;
+}
+.times {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+}
+.time {
+  background: rgb(233, 233, 233);
+  border-radius: 2mm;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 7px 14px;
+  width: fit-content;
+}
+.timings input:checked + label {
+  background: rgb(28, 185, 120);
+  color: #ffffff;
+}
+*/
+
+/** End Movie Seat Picker **/

@@ -35,6 +35,7 @@ function Featured() {
         },
         1000: {
           items: 5,
+          nav: false,
         },
       },
     });
