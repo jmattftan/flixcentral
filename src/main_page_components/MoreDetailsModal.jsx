@@ -7,7 +7,7 @@ function MoreDetailsModal() {
   return (
     <div
       className="modal fade"
-      id="modal"
+      id="more_details_modal"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
       tabIndex="-1"

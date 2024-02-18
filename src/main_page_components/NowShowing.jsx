@@ -5,7 +5,6 @@ import F3 from "../assets/images/movie_logos/f3.webp";
 import F4 from "../assets/images/movie_logos/f4.webp";
 import F5 from "../assets/images/movie_logos/f5.webp";
 import F6 from "../assets/images/movie_logos/f6.webp";
-import { Link } from "react-router-dom";
 
 function NowShowing() {
   return (
@@ -44,7 +43,7 @@ function NowShowing() {
                         type="button"
                         className="more-details m-1 text-light"
                         data-bs-toggle="modal"
-                        data-bs-target="#modal"
+                        data-bs-target="#more_details_modal"
                       >
                         More Details
                       </a>
@@ -53,12 +52,14 @@ function NowShowing() {
                   <div className="container-two">
                     <div className="info-two">
                       <p className="genre m-1">Action/Fanstasy</p>
-                      <Link
+                      <a
+                        type="button"
                         className="buy-ticket m-1 text-light"
-                        to="/BuyTicketPage"
+                        data-bs-toggle="modal"
+                        data-bs-target="#buy_ticket_modal"
                       >
                         Buy Ticket
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>

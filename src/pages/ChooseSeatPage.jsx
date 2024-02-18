@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const regular = 250;
 const premium = 550;
 
-const TicketBooking = () => {
+const ChooseMovieSeat = () => {
   const [amount, setAmount] = useState(0);
   const [count, setCount] = useState(0);
   const [selectedSeats, setSelectedSeats] = useState([]);
@@ -17,23 +17,25 @@ const TicketBooking = () => {
 
   const handleSeatChange = (index) => {
     const newSeats = [...seats];
-    newSeats[index] = !newSeats[index];
-    setSeats(newSeats);
+    if (selectedSeats.length < 5 || newSeats[index]) {
+      newSeats[index] = !newSeats[index];
+      setSeats(newSeats);
 
-    if (newSeats[index]) {
-      setSelectedSeats((prevSelectedSeats) => {
-        const newSelectedSeats = [...prevSelectedSeats, index + 1];
-        console.log("Selected Seats:", newSelectedSeats);
-        return newSelectedSeats;
-      });
-    } else {
-      setSelectedSeats((prevSelectedSeats) => {
-        const newSelectedSeats = prevSelectedSeats.filter(
-          (seat) => seat !== index + 1
-        );
-        console.log("Selected Seats:", newSelectedSeats);
-        return newSelectedSeats;
-      });
+      if (newSeats[index]) {
+        setSelectedSeats((prevSelectedSeats) => {
+          const newSelectedSeats = [...prevSelectedSeats, index + 1];
+          console.log("Selected Seats:", newSelectedSeats);
+          return newSelectedSeats;
+        });
+      } else {
+        setSelectedSeats((prevSelectedSeats) => {
+          const newSelectedSeats = prevSelectedSeats.filter(
+            (seat) => seat !== index + 1
+          );
+          console.log("Selected Seats:", newSelectedSeats);
+          return newSelectedSeats;
+        });
+      }
     }
   };
 
@@ -49,11 +51,6 @@ const TicketBooking = () => {
                     <div className="movie-title">Madame Web</div>
                   </div>
                   <div className="inner-section-two p-1">
-                    <div className="indicators">
-                      <div className="item ms-3">Available</div>
-                      <div className="item ms-3">Booked</div>
-                      <div className="item ms-3">Selected</div>
-                    </div>
                     <div className="pick-seats text-center text-dark p-1">
                       {seats.map((booked, index) => (
                         <React.Fragment key={index}>
@@ -72,6 +69,11 @@ const TicketBooking = () => {
                           </label>
                         </React.Fragment>
                       ))}
+                    </div>
+                    <div className="indicators">
+                      <div className="indicator ms-3">Available</div>
+                      <div className="indicator ms-3">Booked</div>
+                      <div className="indicator ms-3">Selected</div>
                     </div>
                   </div>
                 </div>
@@ -99,4 +101,4 @@ const TicketBooking = () => {
   );
 };
 
-export default TicketBooking;
+export default ChooseMovieSeat;
