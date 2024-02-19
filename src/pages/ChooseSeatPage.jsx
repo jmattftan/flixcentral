@@ -41,16 +41,34 @@ const ChooseMovieSeat = () => {
 
   return (
     <>
-      <div className="container mt-5 p-1">
-        <div className="row m-1 p-1">
-          <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-1">
-            <div className="box m-0 mt-5 p-1">
-              <div className="box-two p-1">
-                <div className="outer-section-one p-1">
-                  <div className="inner-section-one p-1">
+      <div
+        className="container mt-5 mb-5 p-1"
+        style={{ border: "1px solid red" }}
+      >
+        <div className="row m-0 p-1" style={{ border: "1px solid blue" }}>
+          <div
+            className="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-1"
+            style={{ border: "1px solid yellow" }}
+          >
+            <div className="box p-1" style={{ border: "1px solid green" }}>
+              <div
+                className="box-two p-1"
+                style={{ border: "1px solid green" }}
+              >
+                <div
+                  className="outer-section-one p-1"
+                  style={{ border: "1px solid pink" }}
+                >
+                  <div
+                    className="inner-section-one p-1"
+                    style={{ border: "1px solid violet" }}
+                  >
                     <div className="movie-title">Madame Web</div>
                   </div>
-                  <div className="inner-section-two p-1">
+                  <div
+                    className="inner-section-two p-1"
+                    style={{ border: "1px solid violet" }}
+                  >
                     <div className="pick-seats text-center text-dark p-1">
                       {seats.map((booked, index) => (
                         <React.Fragment key={index}>
@@ -58,6 +76,7 @@ const ChooseMovieSeat = () => {
                             type="checkbox"
                             name="selected-seat"
                             id={`S${index + 1}`}
+                            className="selected-seat"
                             checked={booked}
                             onChange={() => handleSeatChange(index)}
                           />
@@ -70,15 +89,21 @@ const ChooseMovieSeat = () => {
                         </React.Fragment>
                       ))}
                     </div>
-                    <div className="indicators">
+                    <div className="indicators p-1">
                       <div className="indicator ms-3">Available</div>
                       <div className="indicator ms-3">Booked</div>
                       <div className="indicator ms-3">Selected</div>
                     </div>
                   </div>
                 </div>
-                <div className="outer-section-two p-3">
-                  <div className="inner-section-three p-1">
+                <div
+                  className="outer-section-two p-3"
+                  style={{ border: "1px solid pink" }}
+                >
+                  <div
+                    className="inner-section-three p-2"
+                    style={{ border: "1px solid violet" }}
+                  >
                     <span>
                       <span className="ticket-count">{count}</span> Ticket
                     </span>

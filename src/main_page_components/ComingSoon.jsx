@@ -10,7 +10,7 @@ function ComingSoon() {
   return (
     <div
       id="coming_soon"
-      className="row main-row ms-0 me-0 p-1"
+      className="row main-row mb-5 ms-0 me-0 p-1"
       style={{ border: "1px solid blue" }}
     >
       <div

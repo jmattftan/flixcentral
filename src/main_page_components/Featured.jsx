@@ -76,7 +76,9 @@ function Featured() {
             >
               <div className="card">
                 <img src={F1} className="card-img-top" />
-                <p className="image-text f-title">MADAME WEB</p>
+                <p className="image-text f-title">
+                  <b>NOW SHOWING</b>
+                </p>
               </div>
             </div>
             <div
@@ -85,7 +87,9 @@ function Featured() {
             >
               <div className="card">
                 <img src={F2} className="card-img-top" />
-                <p className="image-text f-title">LISA FRANKENSTEIN</p>
+                <p className="image-text f-title">
+                  <b>NOW SHOWING</b>
+                </p>
               </div>
             </div>
             <div
@@ -94,7 +98,9 @@ function Featured() {
             >
               <div className="card">
                 <img src={F3} className="card-img-top" />
-                <p className="image-text f-title">FALL GUY</p>
+                <p className="image-text f-title">
+                  <b>NOW SHOWING</b>
+                </p>
               </div>
             </div>
             <div
@@ -103,7 +109,9 @@ function Featured() {
             >
               <div className="card">
                 <img src={F4} className="card-img-top" />
-                <p className="image-text f-title">THE BEEKEEPER</p>
+                <p className="image-text f-title">
+                  <b>COMING SOON</b>
+                </p>
               </div>
             </div>
             <div
@@ -112,7 +120,9 @@ function Featured() {
             >
               <div className="card">
                 <img src={F5} className="card-img-top" />
-                <p className="image-text f-title">DUNE: PART TWO</p>
+                <p className="image-text f-title">
+                  <b>COMING SOON</b>
+                </p>
               </div>
             </div>
             <div
@@ -121,7 +131,9 @@ function Featured() {
             >
               <div className="card">
                 <img src={F6} className="card-img-top" />
-                <p className="image-text f-title">KUNG FU PANDA 4</p>
+                <p className="image-text f-title">
+                  <b>COMING SOON</b>
+                </p>
               </div>
             </div>
           </div>
