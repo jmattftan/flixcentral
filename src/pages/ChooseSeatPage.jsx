@@ -101,7 +101,7 @@ const ChooseMovieSeat = () => {
                   style={{ border: "1px solid pink" }}
                 >
                   <div
-                    className="inner-section-three p-2"
+                    className="inner-section-three me-1 p-2"
                     style={{ border: "1px solid violet" }}
                   >
                     <span>
@@ -113,7 +113,10 @@ const ChooseMovieSeat = () => {
                       {selectedSeats.map((seat) => `S${seat}`).join(", ")}
                     </div>
                   </div>
-                  <button className="btn btn-purchase-ticket" type="button">
+                  <button
+                    className="btn btn-purchase-ticket ms-1"
+                    type="button"
+                  >
                     Purchase Ticket
                   </button>
                 </div>
