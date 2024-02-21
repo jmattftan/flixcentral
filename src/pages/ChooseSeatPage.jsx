@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const regular = 250;
 const premium = 550;
@@ -37,6 +38,12 @@ const ChooseMovieSeat = () => {
         });
       }
     }
+  };
+
+  const navigate = useNavigate();
+
+  const GoToLink = () => {
+    navigate("/PaymentPage");
   };
 
   return (
@@ -116,6 +123,7 @@ const ChooseMovieSeat = () => {
                   <button
                     className="btn btn-purchase-ticket ms-1"
                     type="button"
+                    onClick={GoToLink}
                   >
                     Purchase Ticket
                   </button>

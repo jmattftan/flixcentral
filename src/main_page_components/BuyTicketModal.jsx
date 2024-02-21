@@ -49,7 +49,7 @@ function BuyTicket() {
                     type="checkbox"
                   ></input>
                   <label
-                    for="select-movie-date-1"
+                    htmlFor="select-movie-date-1"
                     className="select-movie-date-label"
                   >
                     11:00 AM
@@ -60,7 +60,7 @@ function BuyTicket() {
                     type="checkbox"
                   ></input>
                   <label
-                    for="select-movie-date-2"
+                    htmlFor="select-movie-date-2"
                     className="select-movie-date-label"
                   >
                     12:00 AM
@@ -71,7 +71,7 @@ function BuyTicket() {
                     type="checkbox"
                   ></input>
                   <label
-                    for="select-movie-date-3"
+                    htmlFor="select-movie-date-3"
                     className="select-movie-date-label"
                   >
                     1:00 PM
@@ -82,7 +82,7 @@ function BuyTicket() {
                     type="checkbox"
                   ></input>
                   <label
-                    for="select-movie-date-4"
+                    htmlFor="select-movie-date-4"
                     className="select-movie-date-label"
                   >
                     2:00 PM
