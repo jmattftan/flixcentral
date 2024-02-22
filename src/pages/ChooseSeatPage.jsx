@@ -86,6 +86,7 @@ const ChooseMovieSeat = () => {
                             className="selected-seat"
                             checked={booked}
                             onChange={() => handleSeatChange(index)}
+                            required
                           />
                           <label
                             htmlFor={`S${index + 1}`}

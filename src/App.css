@@ -270,12 +270,13 @@
   border-top: 10px solid #ffffff;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  box-shadow: inset 5px 5px 35px #0f0f0f, inset 5px 5px 15px #0f0f0f;
   display: grid;
   grid-gap: 18px;
   grid-template-columns: repeat(10, 1fr);
   margin-top: 20px;
   margin: 60px;
-  padding-top: 8rem !important;
+  padding: 8rem 5rem 5rem 5rem !important;
   position: relative;
 }
 
@@ -480,5 +481,73 @@
 }
 
 .btn-pay:hover {
+  background-color: grey;
+}
+
+.ticket-receipt-container {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.ticket-receipt {
+  border-radius: 5px;
+  background: #863232;
+  box-shadow: inset 5px 5px 35px #863232, inset 5px 5px 15px #863232;
+  display: flex;
+  flex-direction: row;
+}
+
+.tr-body-one {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.ticket-receipt-movie-image {
+  width: 150px;
+  height: 200px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.tr-body-two {
+  width: 500px;
+}
+
+.ticket-receipt-details {
+  border: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.tr-body-three {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 1px dashed white;
+}
+
+.ticket-receipt-movie-barcode {
+  width: 150px;
+  height: 200px;
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 991px) {
+  .ticket-receipt-container {
+    justify-content: start;
+  }
+  .ticket-receipt {
+    margin-left: 1rem;
+  }
+}
+
+.btn-download-ticket {
+  background-color: #863232;
+  border: none;
+  color: #ffffff;
+  transition: 0.5s all ease;
+}
+
+.btn-download-ticket:hover {
   background-color: grey;
 }
