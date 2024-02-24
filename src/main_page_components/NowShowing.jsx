@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
 import F1 from "../assets/images/movie_logos/f1.webp";
-import F2 from "../assets/images/movie_logos/f2.webp";
-import F3 from "../assets/images/movie_logos/f3.webp";
-import F4 from "../assets/images/movie_logos/f4.webp";
-import F5 from "../assets/images/movie_logos/f5.webp";
-import F6 from "../assets/images/movie_logos/f6.webp";
 
 function NowShowing() {
-  const [movieDetails, setMovieDetails] = useState([]);
+  const [nsm_array, set_nsm_array] = useState([]);
 
   useEffect(() => {
-    const fetchNowShowingMovieData = async () => {
+    const fetch_now_showing_movie_data = async () => {
       try {
         const response = await fetch(
           "http://localhost:3001/now_showing_movies"
@@ -20,26 +15,25 @@ function NowShowing() {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const nowShowingMovies = await response.json();
-        const movieDetails = nowShowingMovies.map((movie) => ({
-          id: movie._id,
-          title: movie.movie_title,
-          genre: movie.movie_genre,
-          movie_rated_system: movie.movie_rated_system,
-          duration: movie.movie_duration,
+        const now_showing_movies_json = await response.json();
+        const nsm_details = now_showing_movies_json.map((nsmd) => ({
+          id: nsmd._id,
+          title: nsmd.movie_title,
+          genre: nsmd.movie_genre,
+          mrs_indicator: nsmd.movie_rated_system[0].indicator,
+          mrs_description: nsmd.movie_rated_system[0].description,
+          duration: nsmd.movie_duration,
         }));
 
-        setMovieDetails(movieDetails);
-        console.log("Movie Details:", movieDetails);
+        set_nsm_array(nsm_details);
+        console.log("Movie Details:", nsm_details);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    fetchNowShowingMovieData();
+    fetch_now_showing_movie_data();
   }, []);
-
-  const st = "rated-system-pg";
 
   return (
     <div
@@ -55,9 +49,9 @@ function NowShowing() {
           <h1 className="text-center">NOW SHOWING</h1>
         </div>
         <div className="row m-1 p-1" style={{ border: "1px solid blue" }}>
-          {movieDetails.map((movie) => (
+          {nsm_array.map((nsmd) => (
             <div
-              key={movie.id}
+              key={nsmd.id}
               className="col-sm-12 col-md-12 col-lg-4 col-xl-4 p-1"
               style={{ border: "1px solid yellow" }}
             >
@@ -67,10 +61,12 @@ function NowShowing() {
                     <div className="container-one">
                       <img className="image" src={F1} />
                       <div className="info">
-                        <h5 className="title m-1">{movie.title}</h5>
+                        <h5 className="title m-1">{nsmd.title}</h5>
                         <p className="time m-1">
-                          <b className={`${st}`}>{movie.movie_rated_system}</b>{" "}
-                          {movie.duration}
+                          <b className={`${nsmd.mrs_indicator}`}>
+                            {nsmd.mrs_description}
+                          </b>{" "}
+                          {nsmd.duration}
                         </p>
                         <ul>
                           <li>Standard - ₱350</li>
@@ -88,7 +84,7 @@ function NowShowing() {
                     </div>
                     <div className="container-two">
                       <div className="info-two">
-                        <p className="genre m-1">{movie.genre}</p>
+                        <p className="genre m-1">{nsmd.genre}</p>
                         <a
                           type="button"
                           className="buy-ticket m-1 text-light"
