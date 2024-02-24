@@ -31,7 +31,7 @@ function NavigationBar() {
                 aria-current="page"
                 href="#featured"
               >
-                Home
+                Featured
               </a>
             </li>
             <li className="nav-item">

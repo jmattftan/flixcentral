@@ -25,6 +25,12 @@ const ReceiptPage = () => {
         style={{ border: "1px solid blue" }}
       >
         <div className="row m-0 p-1" style={{ border: "1px solid red" }}>
+          <div
+            className="col-12 p-1 text-center"
+            style={{ border: "1px solid yellow" }}
+          >
+            <h1>DOWNLOAD TICKET</h1>
+          </div>
           <div className="col-12 p-1" style={{ border: "1px solid yellow" }}>
             <div
               className="ticket-receipt-container p-1"
@@ -57,26 +63,26 @@ const ReceiptPage = () => {
                   <p className="ticket-receipt-movie-duration">
                     <b className="rated-system-g">G</b> Duration: 1hr 23min
                   </p>
-                  <ul className="ticket-receipt-details">
-                    <li className="ticket-receipt-movie-privilage">
+                  <div className="ticket-receipt-details">
+                    <p
+                      className="ticket-receipt-movie-time m-0"
+                      style={{ float: "right" }}
+                    >
+                      Time: 11:00 PM
+                    </p>
+                    <p className="ticket-receipt-movie-privilage m-0">
                       Premium
-                      <li
-                        className="ticket-receipt-movie-time"
-                        style={{ float: "right" }}
-                      >
-                        Time: 11:00 PM
-                      </li>
-                    </li>
-                    <li className="ticket-receipt-movie-room">
+                    </p>
+                    <p
+                      className="ticket-receipt-movie-seat m-0"
+                      style={{ float: "right" }}
+                    >
+                      Seat: S8
+                    </p>
+                    <p className="ticket-receipt-movie-room m-0">
                       Room: Cinema 1
-                      <li
-                        className="ticket-receipt-movie-seat"
-                        style={{ float: "right" }}
-                      >
-                        Seat: S8
-                      </li>
-                    </li>
-                  </ul>
+                    </p>
+                  </div>
                 </div>
                 <div className="tr-body-three p-0">
                   <img src={Barcode} className="ticket-receipt-movie-barcode" />
