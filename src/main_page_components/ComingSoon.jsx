@@ -18,7 +18,7 @@ function ComingSoon() {
         style={{ border: "1px solid yellow" }}
       >
         <div className="row m-1 p-1" style={{ border: "1px solid blue" }}>
-          <h1 className="text-center">Coming Soon</h1>
+          <h1 className="text-center">COMING SOON</h1>
         </div>
         <div className="row m-1 p-1" style={{ border: "1px solid blue" }}>
           <div

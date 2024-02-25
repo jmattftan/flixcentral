@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import F1 from "../assets/images/movie_logos/f1.webp";
 
 function NowShowing() {
   const [movie_array, set_movie_array] = useState([]);
@@ -14,14 +13,17 @@ function NowShowing() {
         }
 
         const movies_json = await response.json();
-        const movies_map = movies_json.map((movie) => ({
-          id: movie._id,
-          title: movie.movie_title,
-          genre: movie.movie_genre,
-          mrs_indicator: movie.movie_rated_system[0].indicator,
-          mrs_description: movie.movie_rated_system[0].description,
-          duration: movie.movie_duration,
-        }));
+        const movies_map = movies_json
+          .filter((movie) => movie.movie_status === "Now Showing")
+          .map((movie) => ({
+            id: movie._id,
+            image: movie.movie_image,
+            title: movie.movie_title,
+            genre: movie.movie_genre,
+            mrs_indicator: movie.movie_rated_system[0].indicator,
+            mrs_description: movie.movie_rated_system[0].description,
+            duration: movie.movie_duration,
+          }));
 
         set_movie_array(movies_map);
         console.log("Movie Details:", movies_map);
@@ -57,7 +59,10 @@ function NowShowing() {
                 <div className="row m-0 p-0">
                   <div className="container m-0 p-0">
                     <div className="container-one">
-                      <img className="image" src={F1} />
+                      <img
+                        className="image"
+                        src={"./images/movie_logos/" + movie.image}
+                      />
                       <div className="info">
                         <h5 className="title m-1">{movie.title}</h5>
                         <p className="time m-1">
