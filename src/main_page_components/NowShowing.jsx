@@ -16,7 +16,7 @@ function NowShowing() {
         }
 
         const now_showing_movies_json = await response.json();
-        const nsm_details = now_showing_movies_json.map((nsmd) => ({
+        const now_showing_movies_map = now_showing_movies_json.map((nsmd) => ({
           id: nsmd._id,
           title: nsmd.movie_title,
           genre: nsmd.movie_genre,
@@ -25,8 +25,8 @@ function NowShowing() {
           duration: nsmd.movie_duration,
         }));
 
-        set_nsm_array(nsm_details);
-        console.log("Movie Details:", nsm_details);
+        set_nsm_array(now_showing_movies_map);
+        console.log("Movie Details:", now_showing_movies_map);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
