@@ -2,7 +2,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Featured_Movies from "./FeaturedMoviesModel.js";
+import Mongoose_Model from "./mongoose_model.js";
 
 dotenv.config();
 
@@ -20,12 +20,12 @@ mongoose
   .then(() => console.log("DB Connected"))
   .catch((err) => console.log("DB Connection Fail"));
 
-app.get("/now_showing_movies", async (req, res) => {
+app.get("/movies", async (req, res) => {
   try {
-    const featured_movies = await Featured_Movies.find();
+    const featured_movies = await Mongoose_Model.find();
     res.json(featured_movies);
   } catch (error) {
-    console.error("Error fetching feature movies:", error);
+    console.error("Error fetching movie data:", error);
     res.status(500).json({ message: "Server Error" });
   }
 });

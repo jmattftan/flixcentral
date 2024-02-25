@@ -2,37 +2,35 @@ import React, { useEffect, useState } from "react";
 import F1 from "../assets/images/movie_logos/f1.webp";
 
 function NowShowing() {
-  const [nsm_array, set_nsm_array] = useState([]);
+  const [movie_array, set_movie_array] = useState([]);
 
   useEffect(() => {
-    const fetch_now_showing_movie_data = async () => {
+    const fetch_movie_data = async () => {
       try {
-        const response = await fetch(
-          "http://localhost:3001/now_showing_movies"
-        );
+        const response = await fetch("http://localhost:3001/movies");
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const now_showing_movies_json = await response.json();
-        const now_showing_movies_map = now_showing_movies_json.map((nsmd) => ({
-          id: nsmd._id,
-          title: nsmd.movie_title,
-          genre: nsmd.movie_genre,
-          mrs_indicator: nsmd.movie_rated_system[0].indicator,
-          mrs_description: nsmd.movie_rated_system[0].description,
-          duration: nsmd.movie_duration,
+        const movies_json = await response.json();
+        const movies_map = movies_json.map((movie) => ({
+          id: movie._id,
+          title: movie.movie_title,
+          genre: movie.movie_genre,
+          mrs_indicator: movie.movie_rated_system[0].indicator,
+          mrs_description: movie.movie_rated_system[0].description,
+          duration: movie.movie_duration,
         }));
 
-        set_nsm_array(now_showing_movies_map);
-        console.log("Movie Details:", now_showing_movies_map);
+        set_movie_array(movies_map);
+        console.log("Movie Details:", movies_map);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    fetch_now_showing_movie_data();
+    fetch_movie_data();
   }, []);
 
   return (
@@ -49,9 +47,9 @@ function NowShowing() {
           <h1 className="text-center">NOW SHOWING</h1>
         </div>
         <div className="row m-1 p-1" style={{ border: "1px solid blue" }}>
-          {nsm_array.map((nsmd) => (
+          {movie_array.map((movie) => (
             <div
-              key={nsmd.id}
+              key={movie.id}
               className="col-sm-12 col-md-12 col-lg-4 col-xl-4 p-1"
               style={{ border: "1px solid yellow" }}
             >
@@ -61,12 +59,12 @@ function NowShowing() {
                     <div className="container-one">
                       <img className="image" src={F1} />
                       <div className="info">
-                        <h5 className="title m-1">{nsmd.title}</h5>
+                        <h5 className="title m-1">{movie.title}</h5>
                         <p className="time m-1">
-                          <b className={`${nsmd.mrs_indicator}`}>
-                            {nsmd.mrs_description}
+                          <b className={`${movie.mrs_indicator}`}>
+                            {movie.mrs_description}
                           </b>{" "}
-                          {nsmd.duration}
+                          {movie.duration}
                         </p>
                         <ul>
                           <li>Standard - ₱350</li>
@@ -76,7 +74,7 @@ function NowShowing() {
                           type="button"
                           className="more-details m-1 text-light"
                           data-bs-toggle="modal"
-                          data-bs-target="#more_details_modal"
+                          data-bs-target={`#more_details_modal_${movie.id}`}
                         >
                           More Details
                         </a>
@@ -84,7 +82,7 @@ function NowShowing() {
                     </div>
                     <div className="container-two">
                       <div className="info-two">
-                        <p className="genre m-1">{nsmd.genre}</p>
+                        <p className="genre m-1">{movie.genre}</p>
                         <a
                           type="button"
                           className="buy-ticket m-1 text-light"
